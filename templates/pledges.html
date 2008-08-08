@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Pledges so far</h2>
+
+<ul>
+{% for result in query %}
+    <li><strong>{{ result.name }}</strong> ({{ result.postcode }})
+	voted on 
+	<strong>{{ result.date|date:"F jS, Y" }}</strong> 
+	<a href = "/message/{{ result.key }}">message</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Pledges so far</h2>
+
+	<p><strong>{{ pledge.name }}</strong> ({{ pledge.postcode }})
+	voted on 
+	<strong>{{ pledge.date|date:"F jS, Y" }}</strong> and said:</p>
+	<p>{{ pledge.message }}</p>
+	<p>MP: <strong>{{pledge.mp}}</strong><br />
+	Constituency: <strong>{{pledge.constituency}}</strong></p>
+
+{% endblock %}

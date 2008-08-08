@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+	<title>My Climate Vote</title>
+	<script type="text/javascript" src="/static/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/jquery.textarearesizer.compressed.js"></script>
+	<script type="text/javascript">
+		/* jQuery textarea resizer plugin usage */
+		$(document).ready(function() {
+			$('textarea.resizable:not(.processed)').TextAreaResizer();
+		});
+	</script>
+	<link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/static/styles-site.css">
+</head>
+<body>
+	<div id="container">
+		<img id = "headerimage" src="/static/clean-water.gif" alt="Mes Roses" height="320" width="207" />
+			
+		<img src = "/static/climatevote.gif" style = "margin-bottom:5px" alt = "My Climate Vote"/>
+		
+		{% block content %}{% endblock %}
+		
+		<div id="menu">
+			<a href = "/">pledge</a> | 
+			<a href="/about">about</a> |
+			site by <a href = "http://www.torchbox.com/">torchbox</a>
+		</div>
+		
+	</div>
+</body>
+</html>

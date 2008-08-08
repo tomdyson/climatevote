@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<form action = "/pledge" method = "post">
+		<ul>
+			<li>
+				<label for="name">Name:</label>
+				<input name = "name" id = "name" class = "medium" />
+			</li>
+			<li>
+				<label for="email">Email:</label>
+				<input name = "email" id = "email"  class = "medium" />
+			</li>
+			<li>
+				<label for="postcode">Postcode:</label>
+				<input name = "postcode" id = "postcode"  class = "medium" />
+			</li>
+			<li>
+				<label for="message">My message</label>
+				<textarea name = "message" id = "message"  class = "resizable" rows = "5">The only issue that i'll be voting on in the next election is your position on climate change.</textarea>
+			</li>
+			<li>
+				<input type="submit" value="pledge">
+			</li>
+		</ul>
+	</form>
+	<p><a href = "/pledges">Pledges so far</a></p>
+{% endblock %}
